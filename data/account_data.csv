@@ -1,0 +1,11 @@
+name,email,password,days,months,years,firstname,lastname,address,state,city,zipcode,mobilenumber,expected
+
+Testing39,Testing39@mail.com,!Testing30,10,10,2020,first,last,address,state,city,zipcode,101010,True
+Testing33,Testing33@mail.com,,10,10,2020,first,last,address,state,city,zipcode,101010,False
+Testing33,Testing33@mail.com,!Testing30,10,10,2020,,last,address,state,city,zipcode,101010,False
+Testing33,Testing33@mail.com,!Testing30,10,10,2020,first,,address,state,city,zipcode,101010,False
+Testing33,Testing33@mail.com,!Testing30,10,10,2020,first,last,,state,city,zipcode,101010,False
+Testing33,Testing33@mail.com,!Testing30,10,10,2020,first,last,address,,city,zipcode,101010,False
+Testing33,Testing33@mail.com,!Testing30,10,10,2020,first,last,address,state,,zipcode,101010,False
+Testing33,Testing33@mail.com,!Testing30,10,10,2020,first,last,address,state,city,,101010,False
+Testing33,Testing33@mail.com,!Testing30,10,10,2020,first,last,address,state,city,zipcode,,False

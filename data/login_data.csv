@@ -1,0 +1,8 @@
+email,password,expected
+
+Testing78@gmail.com,!Testing78,True
+Testing34@mail.com,!Testing33,False
+Testing33@.com,!Testing33,False
+Testing33,!Testing33,False
+,Testing33,False
+Testing33@mail.com,,False

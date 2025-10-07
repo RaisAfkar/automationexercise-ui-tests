@@ -1,0 +1,7 @@
+name,email,expected
+
+Testing41,Testing41@mail.com,True
+Testing41,Testing41,False
+Testing41,Testing41@.com,False
+Testing41,,False
+,Testing41@.com,False
