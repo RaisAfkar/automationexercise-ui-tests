@@ -4,7 +4,7 @@ from pathlib import Path
 
 def load_data(filename):
 
-    base_path = Path(__file__).parent.parent / "data"
+    base_path = Path(__file__).parent.parent.resolve() / "data"
     file_path = base_path / filename
 
     if not file_path.exists():
@@ -21,3 +21,5 @@ def load_data(filename):
 
     else:
         raise ValueError("Format file tidak didukung. Gunakan CSV atau JSON")
+    
+    return file_path

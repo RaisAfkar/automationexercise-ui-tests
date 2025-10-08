@@ -12,7 +12,9 @@ def save_data(filename, data):
     
     elif filename.endswith(".csv"):
         with open(file_path,"w",newline="",encoding="utf-8") as c:
-            csv.writer(data, c)
+            writer = csv.DictWriter(c, fieldnames=data[0].keys())
+            writer.writeheader()
+            writer.writerows(data)
     
     elif filename.endswith(".txt"):
         with open(file_path,"w",encoding="utf-8") as t:
