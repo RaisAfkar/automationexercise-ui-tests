@@ -10,6 +10,7 @@ class LoginPage(BasePage):
     LOGIN_ERROR = (By.XPATH, "//p[contains(text(), 'email')]")
     LOGIN_BTN = (By.CSS_SELECTOR, "button[data-qa='login-button']")
     LOGIN_LOGGGED = (By.XPATH, "//ul[@class='nav navbar-nav']//a[contains(text(), 'Logged')]")
+    LOGIN_LOGOUT_BUTTON = (By.PARTIAL_LINK_TEXT, "Logout")
 
     def click_signup_or_login_button(self):
         self.click(self.SIGNUP_OR_LOGIN_BTN)
@@ -32,3 +33,9 @@ class LoginPage(BasePage):
     
     def get_validate_required_message(self, locator):
         self.validation_message(locator)
+    
+    def logout_button_is_visible(self):
+        return self.is_visible(self.LOGIN_LOGOUT_BUTTON)
+    
+    def click_logout_btn(self):
+        self.click(self.LOGIN_LOGOUT_BUTTON)
