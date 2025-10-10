@@ -1,0 +1,7 @@
+{
+    "product": [
+        {"name" : "jeans", "expected": "is displayed"},
+        {"name" : "jeanss", "expected": "not is displayed"}
+
+    ]
+}
