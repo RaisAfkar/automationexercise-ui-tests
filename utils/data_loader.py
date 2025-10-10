@@ -8,7 +8,7 @@ def load_data(filename):
     file_path = base_path / filename
 
     if not file_path.exists():
-        raise FileNotFoundError(f"❌ File not found: {file_path}")
+        raise FileNotFoundError(f"File not found: {file_path}")
 
     if filename.endswith(".csv"):
         with open(file_path, newline="", encoding="utf-8") as f:

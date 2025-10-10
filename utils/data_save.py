@@ -8,7 +8,7 @@ def save_data(filename, data):
 
     if filename.endswith(".json"):
         with open(file_path,"w",encoding="utf-8") as j:
-            json.dump(data, j, indent=2)
+            json.dump(data, j, indent=2, ensure_ascii=False)
     
     elif filename.endswith(".csv"):
         with open(file_path,"w",newline="",encoding="utf-8") as c:
